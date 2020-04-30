@@ -1,0 +1,22 @@
+---
+title: "Data Wrangling"
+
+draft: false
+toc: true
+toc_float: true
+type: docs
+
+linktitle: Data Wrangling with dplyr
+menu:
+  docs:
+    parent: Exploratory Data Analysis
+    weight: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Under development
+
+Coming soon...

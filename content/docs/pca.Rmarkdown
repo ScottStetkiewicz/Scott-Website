@@ -1,0 +1,22 @@
+---
+title: "PCA"
+
+draft: false
+toc: true
+toc_float: true
+type: docs
+
+linktitle: Principal Component Analysis
+menu:
+  docs:
+    parent: Machine Learning
+    weight: 1
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Under development
+
+Coming soon...

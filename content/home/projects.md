@@ -1,12 +1,12 @@
 +++
 # A Projects section created with the Portfolio widget.
-widget = "portfolio"  # See https://sourcethemes.com/academic/docs/page-builder/
+widget = "projects"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 65  # Order that this section will appear.
+weight = 21  # Order that this section will appear.
 
-title = "Projects"
-subtitle = ""
+title = "Shiny Apps"
+subtitle = "This section is a gallery of personal and professional `shiny`-based applications I have designed for cleaning, wrangling and visualizing complex data. <br/><br/> Apps incorporate packages such as `leaflet` for scalable GIS, `DT` for reactive table interfaces, `plotly` for D3 tooltip functionality, and `crosstalk` for dashboard interactivity. <br/><br/> Projects can be filtered on this carousel by tag (e.g. 'R', 'Shiny', etc.). Non-`shiny` walkthroughs using `markdown` can be found in the 'Tutorials' section of the site."
 
 [content]
   # Page type to display. E.g. project.
@@ -21,17 +21,33 @@ subtitle = ""
   # Default filter index (e.g. 0 corresponds to the first `[[filter_button]]` instance below).
   filter_default = 0
   
-  # [[content.filter_button]]
-  #   name = "All"
-  #   tag = "*"
+[[filter]]
+  name = "All"
+  tag = "*"
+
+[[filter]]
+  name = "Data Cleaning"
+  tag = "Data Cleaning"
   
-  # [[content.filter_button]]
-  #   name = "Deep Learning"
-  #   tag = "Deep Learning"
+[[filter]]
+  name = "R"
+  tag = "R"
+
+[[filter]]
+  name = "Shiny"
+  tag = "Shiny"
   
-  # [[content.filter_button]]
-  #   name = "Other"
-  #   tag = "Demo"
+[[filter]]
+  name = "Crosstalk"
+  tag = "Crosstalk"
+  
+[[filter]]
+  name = "Dashboard"
+  tag = "Dashboard"
+
+[[filter]]
+  name = "Other"
+  tag = "Demo"
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.
@@ -42,7 +58,7 @@ subtitle = ""
   #   2 = Compact
   #   3 = Card
   #   5 = Showcase
-  view = 3
+  view = 5
 
   # For Showcase view, flip alternate rows?
   flip_alt_rows = false
