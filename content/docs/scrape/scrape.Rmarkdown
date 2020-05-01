@@ -147,12 +147,10 @@ labs <- lapply(seq(nrow(test2)), function(i) {
 
 ### Plotting the Output
 
-The final step is to simply plug in our variables and final `test2` dataframe into `leaflet` to visualize the results. The interactive map produced by our code can't be rendered live on this site, so here is a screenshot of the functioning output:
-
-![](/docs/scrape/scrape2.png)
+The final step is to simply plug in our variables and final `test2` dataframe into `leaflet` to visualize the results:
 
 ```{r, eval=FALSE}
-leaflet(test2) %>% 
+l2<-leaflet(test2) %>% 
   addTiles() %>%
   addAwesomeMarkers(~lon, ~lat, popup = ~Salary, 
                     icon = awesomeIcons(icon = 'ion-ionic', 
@@ -171,7 +169,11 @@ leaflet(test2) %>%
             labels= c("Over £40,000","£30,000 - £39,999","£20,000 - £29,999","Below £20,000","Rate Unavailable"),
             title= "Salary",
             opacity = 1)
+
+htmlwidgets::saveWidget(frameableWidget(l2),'leafletscrape.html')
 ```
+
+<iframe seamless src="../leafletscrape.html" width="100%" height="500"></iframe>
 
 ### Final Thoughts
 

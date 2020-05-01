@@ -137,8 +137,8 @@ head(test2) %>%
 <tbody>
   <tr>
    <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:right;"> -3.262770 </td>
-   <td style="text-align:right;"> 54.71821 </td>
+   <td style="text-align:right;"> -3.2740175 </td>
+   <td style="text-align:right;"> 54.69682 </td>
    <td style="text-align:left;"> Not Available </td>
    <td style="text-align:left;"> Not Available </td>
    <td style="text-align:left;"> United Kingdom </td>
@@ -151,8 +151,8 @@ head(test2) %>%
   </tr>
   <tr>
    <td style="text-align:left;"> Newcastle upon Tyne </td>
-   <td style="text-align:right;"> -1.609914 </td>
-   <td style="text-align:right;"> 54.95999 </td>
+   <td style="text-align:right;"> -1.6117088 </td>
+   <td style="text-align:right;"> 54.97827 </td>
    <td style="text-align:left;"> North East England </td>
    <td style="text-align:left;"> England </td>
    <td style="text-align:left;"> United Kingdom </td>
@@ -165,8 +165,8 @@ head(test2) %>%
   </tr>
   <tr>
    <td style="text-align:left;"> Edinburgh </td>
-   <td style="text-align:right;"> -3.170494 </td>
-   <td style="text-align:right;"> 55.94859 </td>
+   <td style="text-align:right;"> -3.1898753 </td>
+   <td style="text-align:right;"> 55.94996 </td>
    <td style="text-align:left;"> Not Available </td>
    <td style="text-align:left;"> Scotland </td>
    <td style="text-align:left;"> United Kingdom </td>
@@ -178,9 +178,23 @@ head(test2) %>%
    <td style="text-align:right;"> NA </td>
   </tr>
   <tr>
+   <td style="text-align:left;"> Newcastle upon Tyne </td>
+   <td style="text-align:right;"> -1.6114479 </td>
+   <td style="text-align:right;"> 54.97087 </td>
+   <td style="text-align:left;"> North East England </td>
+   <td style="text-align:left;"> England </td>
    <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:right;"> -3.278891 </td>
-   <td style="text-align:right;"> 54.69959 </td>
+   <td style="text-align:left;"> Learning and Teaching Assistant </td>
+   <td style="text-align:left;"> £18,709 - £21,236 a year </td>
+   <td style="text-align:left;"> Newcastle University </td>
+   <td style="text-align:left;"> Newcastle upon Tyne </td>
+   <td style="text-align:left;"> 25 days ago </td>
+   <td style="text-align:right;"> 18709 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:right;"> -3.2790344 </td>
+   <td style="text-align:right;"> 54.69915 </td>
    <td style="text-align:left;"> Not Available </td>
    <td style="text-align:left;"> Not Available </td>
    <td style="text-align:left;"> United Kingdom </td>
@@ -193,8 +207,8 @@ head(test2) %>%
   </tr>
   <tr>
    <td style="text-align:left;"> Cambridge </td>
-   <td style="text-align:right;"> 0.144693 </td>
-   <td style="text-align:right;"> 52.19035 </td>
+   <td style="text-align:right;"> 0.1219514 </td>
+   <td style="text-align:right;"> 52.20906 </td>
    <td style="text-align:left;"> East of England </td>
    <td style="text-align:left;"> England </td>
    <td style="text-align:left;"> United Kingdom </td>
@@ -204,20 +218,6 @@ head(test2) %>%
    <td style="text-align:left;"> Cambridge </td>
    <td style="text-align:left;"> 30+ days ago </td>
    <td style="text-align:right;"> 41526 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Newcastle upon Tyne </td>
-   <td style="text-align:right;"> -1.618921 </td>
-   <td style="text-align:right;"> 54.97257 </td>
-   <td style="text-align:left;"> North East England </td>
-   <td style="text-align:left;"> England </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> Learning and Teaching Assistant </td>
-   <td style="text-align:left;"> £18,709 - £21,236 a year </td>
-   <td style="text-align:left;"> Newcastle University </td>
-   <td style="text-align:left;"> Newcastle upon Tyne </td>
-   <td style="text-align:left;"> 25 days ago </td>
-   <td style="text-align:right;"> 18709 </td>
   </tr>
 </tbody>
 </table>
@@ -259,13 +259,11 @@ labs <- lapply(seq(nrow(test2)), function(i) {
 
 ### Plotting the Output
 
-The final step is to simply plug in our variables and final `test2` dataframe into `leaflet` to visualize the results. The interactive map produced by our code can't be rendered live on this site, so here is a screenshot of the functioning output:
-
-![](/docs/scrape/scrape2.png)
+The final step is to simply plug in our variables and final `test2` dataframe into `leaflet` to visualize the results:
 
 
 ```r
-leaflet(test2) %>% 
+l2<-leaflet(test2) %>% 
   addTiles() %>%
   addAwesomeMarkers(~lon, ~lat, popup = ~Salary, 
                     icon = awesomeIcons(icon = 'ion-ionic', 
@@ -284,7 +282,11 @@ leaflet(test2) %>%
             labels= c("Over £40,000","£30,000 - £39,999","£20,000 - £29,999","Below £20,000","Rate Unavailable"),
             title= "Salary",
             opacity = 1)
+
+htmlwidgets::saveWidget(frameableWidget(l2),'leafletscrape.html')
 ```
+
+<iframe seamless src="../leafletscrape.html" width="100%" height="500"></iframe>
 
 ### Final Thoughts
 
