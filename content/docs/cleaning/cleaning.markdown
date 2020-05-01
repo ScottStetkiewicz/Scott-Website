@@ -7,7 +7,7 @@ type: docs
 linktitle: Dataset Preprocessing
 menu:
   docs:
-    parent: Exploratory Data Analysis
+    parent: EDA
     weight: 1
 ---
 

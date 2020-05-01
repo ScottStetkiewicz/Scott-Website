@@ -1,12 +1,12 @@
 ---
-title: "PCA"
+title: "Principal Component Analysis"
 
 draft: false
 toc: true
 toc_float: true
 type: docs
 
-linktitle: Principal Component Analysis
+linktitle: PCA
 menu:
   docs:
     parent: Machine Learning
