@@ -19,7 +19,7 @@ This tutorial goes through data wrangling basics using `python`'s Jupyter Notebo
 
  <iframe
        src="../pandas.html"
-       width="90%"
+       width="130%"
        height="1000px"
        style="border:none;">
  </iframe>
