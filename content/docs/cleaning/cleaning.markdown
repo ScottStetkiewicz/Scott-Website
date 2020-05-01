@@ -1,5 +1,5 @@
 ---
-title: "Cleaning ADS repository data (Ponting & Butcher 2015)"
+title: "Cleaning ADS Repository Data: (Ponting & Butcher 2015)"
 draft: false
 toc: true
 toc_float: true
@@ -339,7 +339,7 @@ With our data now officially tidy, we can begin to explore trends depending on o
 ggplot(dennys) + geom_bar(aes(x = DENOMINATION, fill = DENOMINATION), color="black") + theme_bw()
 ```
 
-<img src="/docs/cleaning_files/figure-html/unnamed-chunk-16-1.png" width="672" />
+<img src="/docs/cleaning/cleaning_files/figure-html/unnamed-chunk-16-1.png" width="672" />
 
 
 ```r
@@ -350,4 +350,4 @@ ggplot(dennys, aes(x=reorder(EMPEROR,Years),y=BULLION,fill=EMPEROR), color="blac
 ## Warning: Removed 2 rows containing non-finite values (stat_boxplot).
 ```
 
-<img src="/docs/cleaning_files/figure-html/unnamed-chunk-17-1.png" width="672" />
+<img src="/docs/cleaning/cleaning_files/figure-html/unnamed-chunk-17-1.png" width="672" />
