@@ -1,5 +1,5 @@
 ---
-title: "Web Scraping Archaeology Jobs"
+title: "Web Scraping Archaeology Jobs from Indeed.co.uk"
 
 draft: false
 toc: true
@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Background
 
-Following my PhD, I spent quite a lot of time and effort applying for jobs in the UK. Each day, I'd scroll through numerous job forums that were organized in different fashions, trying to identify the best employment opportunities. While a lot of these sites had the specific information I wanted, they weren't particularly helpful when it came to visualizing where these jobs were and how the stacked up to one another in terms of salary. So I decided to explore web scraping with `rvest` as an option to automate the process of searching for new jobs on **Indeed.co.uk** and using `leaflet` as a GIS interface to plot the postings across the UK. 
+Following my PhD, I spent quite a lot of time and effort applying for jobs in the UK. Each day, I'd scroll through numerous job forums that were organized in different fashions, trying to identify the best employment opportunities. While a lot of these sites had the specific information I wanted, they weren't particularly helpful when it came to visualizing where these jobs were and how they stacked up to one another in terms of salary. So I decided to explore web scraping with `rvest` as an option to automate the process of searching for new jobs on **Indeed.co.uk**, using `leaflet` as a GIS interface to plot the postings across the UK. 
 
 ```{r, message=FALSE}
 library(tidyverse)
@@ -29,11 +29,13 @@ library(stringr)
 library(jsonlite)
 library(leaflet)
 library(htmltools)
+library(kableExtra)
+library(knitr)
 ```
 
 ### Scraping and Dataframe Construction
 
-The first stage in this process is to set the `url` to the indeed.co.uk link, and then assign that to a new variable called `webpage`. With that complete, we can use `dplyr` chaining to identify the nodes of interest on the webpage and extract these to a dataframe called `df`:
+The first stage in this process is to set the `url` to the indeed.co.uk link, and then assign that to a new variable called `webpage`. With that complete, we can use `dplyr` chaining to identify the nodes of interest on the webpage (I find the [SelectorGadget tool](https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb) incredibly useful for this) and extract these to a dataframe called `df`:
 
 ```{r}
 url <- "https://www.indeed.co.uk/jobs?q=Archaeology"
@@ -58,7 +60,7 @@ df <- webpage %>%
                      {if(length(.) == 0) NA else .}))
 ```
 
-Some of the values extracted from the `Salary` node are not numeric values (e.g. "Competitive Salary", etc.):
+Extract only the numbers from the `Salary` node:
 
 ```{r}
 df <- df %>% mutate(salary2=parse_number(Salary))
@@ -66,7 +68,7 @@ df <- df %>% mutate(salary2=parse_number(Salary))
 
 ### Geocoding
 
-In order to map the jobs now compiled in our database, we have to be able to geolocate the opportunities to identify their latitude and longitude for mapping. Michael Hainke's [`nominatim`-based solution](http://www.hainke.ca) provides the base function for performing this task: 
+In order to map the jobs now compiled in our database, we have to be able to geolocate the opportunities to identify their latitude and longitude for mapping. Michael Hainke's [`nominatim`-based solution](http://www.hainke.ca) provides the base function for performing this task using `OpenStreetMap`: 
 
 ```{r}
 nominatim_osm <- function(address = NULL)
@@ -104,14 +106,16 @@ test2$lat <- jitter(test2$lat, factor = 1.5)
 test2$lon <- jitter(test2$lon, factor = 1.5)
 ```
 
-Here's what the dataframe looks like:
+Here's what the dataframe head looks like:
 ```{r}
-head(test2)
+head(test2) %>%
+  kable %>%
+  kable_styling(bootstrap_options = "striped", full_width = F)
 ```
 
 ### Customizing the Layout
 
-So we now have our jobs scraped with relevant information like salary, title, organization, etc. as well as the salient geolocation data for each opportunity. Befoe plotting in `leaflet`, however, I wanted a way of classifying the jobs based on the advertised salary. To do this, I used `mutate` to create a new variable assigning a color to different salary bands:
+So we now have our jobs scraped with relevant information like salary, title, organization, etc. as well as the salient geolocation data for each opportunity. Before plotting in `leaflet`, however, I wanted a way of classifying the jobs based on the advertised salary. To do this, I used `mutate` to create a new variable assigning a color to different salary bands:
 
 ```{r}
 test2 <- test2 %>%
@@ -130,7 +134,7 @@ test2 <- test2 %>% rename(Salary_low=salary2,Post_date=Postdate)
 test2 <- test2 %>% select(Title,Location,Employer,Salary,lon,lat,Salary_low,Color_code,District,Country,State,Post_date)
 ```
 
-Lastly, I like tooltips. A lot. So this code sets the labels for each job:
+Lastly, I like tooltips. A lot. So this code sets the labels for each job to include the respective `Employer`, `Title` and `Salary` information when we hover over the `leaflet` markers:
 
 ``` {r}
 labs <- lapply(seq(nrow(test2)), function(i) {
@@ -143,12 +147,19 @@ labs <- lapply(seq(nrow(test2)), function(i) {
 
 ### Plotting the Output
 
-The final step is to simply plug in our variables and final `test2` dataframe into `leaflet` to visualize the results:
+The final step is to simply plug in our variables and final `test2` dataframe into `leaflet` to visualize the results. The interactive map produced by our code can't be rendered live on this site, so here is a screenshot of the functioning output:
 
-```{r}
-leaflet(test2) %>% addTiles() %>%
-  addAwesomeMarkers(~lon, ~lat, popup = ~Salary, icon = awesomeIcons(icon = 'ion-ionic', library = 'ion', markerColor = test2$Color_code), 
-                    label = lapply(labs, htmltools::HTML),labelOptions = labelOptions(
+![](/docs/scrape/scrape2.png)
+
+```{r, eval=FALSE}
+leaflet(test2) %>% 
+  addTiles() %>%
+  addAwesomeMarkers(~lon, ~lat, popup = ~Salary, 
+                    icon = awesomeIcons(icon = 'ion-ionic', 
+                                        library = 'ion', 
+                                        markerColor = test2$Color_code), 
+                    label = lapply(labs, htmltools::HTML),
+                    labelOptions = labelOptions(textsize = "15px",
                       style=list(
                         'background'='rgba(243, 241, 239, 1)',
                         'border-color' = 'rgba(46, 49, 49, 1)',
@@ -161,8 +172,6 @@ leaflet(test2) %>% addTiles() %>%
             title= "Salary",
             opacity = 1)
 ```
-
-![](/scrape.png)
 
 ### Final Thoughts
 
