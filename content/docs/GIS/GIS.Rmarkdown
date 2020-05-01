@@ -6,7 +6,7 @@ toc: true
 toc_float: true
 type: docs
 
-linktitle: GIS with Leaflet
+linktitle: Leaflet Choropleth
 menu:
   docs:
     parent: GIS
@@ -17,6 +17,22 @@ menu:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Under development
+```{r,message=FALSE}
+library(tidyverse)
+library(leaflet)
+library(stringr)
+library(sf)
+library(here)
+library(widgetframe)
+```
 
-Coming soon...
+```{r}
+m <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lng = -87.597241, lat = 41.789829,
+             popup = "Saieh Hall of Economics")
+m %>%
+  frameWidget()
+```
+
+## Under development
