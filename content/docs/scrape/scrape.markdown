@@ -137,8 +137,8 @@ head(test2) %>%
 <tbody>
   <tr>
    <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:right;"> -3.2784939 </td>
-   <td style="text-align:right;"> 54.70051 </td>
+   <td style="text-align:right;"> -3.262770 </td>
+   <td style="text-align:right;"> 54.71821 </td>
    <td style="text-align:left;"> Not Available </td>
    <td style="text-align:left;"> Not Available </td>
    <td style="text-align:left;"> United Kingdom </td>
@@ -151,8 +151,8 @@ head(test2) %>%
   </tr>
   <tr>
    <td style="text-align:left;"> Newcastle upon Tyne </td>
-   <td style="text-align:right;"> -1.6140199 </td>
-   <td style="text-align:right;"> 54.97020 </td>
+   <td style="text-align:right;"> -1.609914 </td>
+   <td style="text-align:right;"> 54.95999 </td>
    <td style="text-align:left;"> North East England </td>
    <td style="text-align:left;"> England </td>
    <td style="text-align:left;"> United Kingdom </td>
@@ -164,23 +164,9 @@ head(test2) %>%
    <td style="text-align:right;"> 18342 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Cambridge </td>
-   <td style="text-align:right;"> 0.1261228 </td>
-   <td style="text-align:right;"> 52.20752 </td>
-   <td style="text-align:left;"> East of England </td>
-   <td style="text-align:left;"> England </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> University Lecturer in Environmental Archaeology </td>
-   <td style="text-align:left;"> £41,526 - £52,559 a year </td>
-   <td style="text-align:left;"> University of Cambridge </td>
-   <td style="text-align:left;"> Cambridge </td>
-   <td style="text-align:left;"> 30+ days ago </td>
-   <td style="text-align:right;"> 41526 </td>
-  </tr>
-  <tr>
    <td style="text-align:left;"> Edinburgh </td>
-   <td style="text-align:right;"> -3.1879381 </td>
-   <td style="text-align:right;"> 55.95070 </td>
+   <td style="text-align:right;"> -3.170494 </td>
+   <td style="text-align:right;"> 55.94859 </td>
    <td style="text-align:left;"> Not Available </td>
    <td style="text-align:left;"> Scotland </td>
    <td style="text-align:left;"> United Kingdom </td>
@@ -192,32 +178,46 @@ head(test2) %>%
    <td style="text-align:right;"> NA </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> London WC1E 7HX </td>
-   <td style="text-align:right;"> -0.1463199 </td>
-   <td style="text-align:right;"> 51.48968 </td>
-   <td style="text-align:left;"> Greater London </td>
-   <td style="text-align:left;"> England </td>
    <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> POSTDOCTORAL RESEARCHER </td>
-   <td style="text-align:left;"> £38,594 - £44,113 a year </td>
-   <td style="text-align:left;"> Birkbeck University of London </td>
-   <td style="text-align:left;"> London WC1E 7HX </td>
+   <td style="text-align:right;"> -3.278891 </td>
+   <td style="text-align:right;"> 54.69959 </td>
+   <td style="text-align:left;"> Not Available </td>
+   <td style="text-align:left;"> Not Available </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Built Heritage Specialist </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> WSP </td>
+   <td style="text-align:left;"> United Kingdom </td>
    <td style="text-align:left;"> 30+ days ago </td>
-   <td style="text-align:right;"> 38594 </td>
+   <td style="text-align:right;"> NA </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> West End </td>
-   <td style="text-align:right;"> -71.0664391 </td>
-   <td style="text-align:right;"> 42.36884 </td>
-   <td style="text-align:left;"> Not Available </td>
-   <td style="text-align:left;"> Massachusetts </td>
-   <td style="text-align:left;"> United States of America </td>
-   <td style="text-align:left;"> Lecturer </td>
-   <td style="text-align:left;"> NA </td>
-   <td style="text-align:left;"> Morgan Hunt Group </td>
-   <td style="text-align:left;"> West End </td>
-   <td style="text-align:left;"> 1 day ago </td>
-   <td style="text-align:right;"> NA </td>
+   <td style="text-align:left;"> Cambridge </td>
+   <td style="text-align:right;"> 0.144693 </td>
+   <td style="text-align:right;"> 52.19035 </td>
+   <td style="text-align:left;"> East of England </td>
+   <td style="text-align:left;"> England </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> University Lecturer in Environmental Archaeology </td>
+   <td style="text-align:left;"> £41,526 - £52,559 a year </td>
+   <td style="text-align:left;"> University of Cambridge </td>
+   <td style="text-align:left;"> Cambridge </td>
+   <td style="text-align:left;"> 30+ days ago </td>
+   <td style="text-align:right;"> 41526 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Newcastle upon Tyne </td>
+   <td style="text-align:right;"> -1.618921 </td>
+   <td style="text-align:right;"> 54.97257 </td>
+   <td style="text-align:left;"> North East England </td>
+   <td style="text-align:left;"> England </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Learning and Teaching Assistant </td>
+   <td style="text-align:left;"> £18,709 - £21,236 a year </td>
+   <td style="text-align:left;"> Newcastle University </td>
+   <td style="text-align:left;"> Newcastle upon Tyne </td>
+   <td style="text-align:left;"> 25 days ago </td>
+   <td style="text-align:right;"> 18709 </td>
   </tr>
 </tbody>
 </table>

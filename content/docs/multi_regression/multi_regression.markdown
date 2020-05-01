@@ -87,7 +87,7 @@ Scatterplots of the relationships between the dependent and independent variable
 ggpairs(state, lower=list(continuous="smooth"))
 ```
 
-<img src="/docs/multi_regression_files/figure-html/unnamed-chunk-3-1.png" width="672" />
+<img src="/docs/multi_regression/multi_regression_files/figure-html/unnamed-chunk-3-1.png" width="672" />
 
 Most predictors display a linear relationship with `Life.Exp`, though `Population` indicates low overall correlation with other variables. `Area` shows virtually no linear tendency, meaning it may need to be dropped. 
 
@@ -100,7 +100,7 @@ We can check for for multicollinearity between the 7 other variables besides lif
 ggpairs(state %>% dplyr::select(-Life.Exp), lower=list(continuous="smooth"))
 ```
 
-<img src="/docs/multi_regression_files/figure-html/unnamed-chunk-4-1.png" width="672" />
+<img src="/docs/multi_regression/multi_regression_files/figure-html/unnamed-chunk-4-1.png" width="672" />
 
 We can then assess the multicollinearity of an initial model with all variables by using variance inflation factor (VIF) scoring, which measures how much the variance of a regression coefficient is inflated:
 
@@ -128,7 +128,7 @@ durbinWatsonTest(model)
 
 ```
 ##  lag Autocorrelation D-W Statistic p-value
-##    1      0.02076189       1.92928   0.824
+##    1      0.02076189       1.92928   0.764
 ##  Alternative hypothesis: rho != 0
 ```
 
@@ -145,7 +145,7 @@ All three of these assumptions can be checked using the `autoplot` function in t
 autoplot(model)
 ```
 
-<img src="/docs/multi_regression_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+<img src="/docs/multi_regression/multi_regression_files/figure-html/unnamed-chunk-7-1.png" width="672" />
 
 The residuals variance appears to be relatively constant in the first plot, thus satisfying **Assumption #4**. Looking at the *QQ plot* we can see that for the most part our residuals look like they are normally distributed, satisfying **Assumtion #5** (only extreme deviances are likely to have significant impact on the model). Lastly, the *Residuals v.s. Leverage* plot shows that the states of Alaska and Hawaii may represent leverage points in our model and merit further investigation. 
 
@@ -157,7 +157,7 @@ x <- ggally_nostic_cooksd(model, ggplot2::aes(state$Life.Exp, .cooksd, label=sta
 x + geom_text(aes(label = state.abb, hjust=-0.25, vjust=0))
 ```
 
-<img src="/docs/multi_regression_files/figure-html/unnamed-chunk-8-1.png" width="672" />
+<img src="/docs/multi_regression/multi_regression_files/figure-html/unnamed-chunk-8-1.png" width="672" />
 
 We likely do not need to remove Hawaii from the analysis, and will revisit this particular state later in the **Model Tuning** section. The state of Alaska, however, is almost certainly being impacted by its immense area and extremely small population metrics compared to all other US states. Once we begin to drop predictors (including `Area`), this outlier disappears from the Cook's Distance plots (see **Model Tuning**). Therefore we can ignore this point for now, having satisfied the requirements of **Assumption #6**, and can proceed with model selection procedures.
 
@@ -329,7 +329,7 @@ We can therefore assume that these four components indeed represent the best pre
 ggscatmat(state, columns = c("Population", "Murder", "HS.Grad", "Frost"))
 ```
 
-<img src="/docs/multi_regression_files/figure-html/unnamed-chunk-14-1.png" width="672" />
+<img src="/docs/multi_regression/multi_regression_files/figure-html/unnamed-chunk-14-1.png" width="672" />
 
 ### Outliers
 
@@ -342,7 +342,7 @@ x <- ggally_nostic_cooksd(model2, ggplot2::aes(state$Murder, .cooksd, label=stat
 x + geom_text(aes(label = state.abb, hjust=-0.25, vjust=0))
 ```
 
-<img src="/docs/multi_regression_files/figure-html/unnamed-chunk-15-1.png" width="672" />
+<img src="/docs/multi_regression/multi_regression_files/figure-html/unnamed-chunk-15-1.png" width="672" />
 
 Note that by removing `Area`, Alaska is no longer present as an outlier in this graphic. Hawaii can be removed from the dataset so we can see how omitting this row affects the calculations:
 
@@ -389,7 +389,7 @@ One final adjustment is to see how a log transformation of the `Population` vari
 qplot(sample = Population, data = state) + stat_qq_line()
 ```
 
-<img src="/docs/multi_regression_files/figure-html/unnamed-chunk-17-1.png" width="672" />
+<img src="/docs/multi_regression/multi_regression_files/figure-html/unnamed-chunk-17-1.png" width="672" />
 
 ```r
 shapiro.test(state$Population)
@@ -411,7 +411,7 @@ state$PopulationLOG <- log(state$Population)
 qplot(sample = PopulationLOG, data = state) + stat_qq_line()
 ```
 
-<img src="/docs/multi_regression_files/figure-html/unnamed-chunk-18-1.png" width="672" />
+<img src="/docs/multi_regression/multi_regression_files/figure-html/unnamed-chunk-18-1.png" width="672" />
 
 ```r
 shapiro.test(state$PopulationLOG)
