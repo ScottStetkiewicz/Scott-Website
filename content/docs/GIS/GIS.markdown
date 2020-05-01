@@ -6,10 +6,10 @@ toc: true
 toc_float: true
 type: docs
 
-linktitle: Choropleth
+linktitle: Leaflet
 menu:
   docs:
-    parent: Geospatial visualization
+    parent: GIS
     weight: 1
 ---
 
@@ -49,7 +49,33 @@ A basic example is:
 ```r
 library(leaflet)
 library(widgetframe)
-l <- leaflet() %>% addTiles()
+library(raster)
+library(leaflet)
+library(tidyverse)
+
+# Get UK polygon data
+UK <- getData("GADM", country = "GB", level = 2)
+
+### Create dummy data
+set.seed(111)
+mydf <- data.frame(place = unique(UK$NAME_2),
+                   value = sample.int(n = 1000000, size = n_distinct(UK$NAME_2), replace = TRUE))
+
+### Create five colors for fill
+mypal <- colorQuantile(palette = "RdYlBu", domain = mydf$value, n = 5, reverse = TRUE)
+
+l <- leaflet() %>% 
+addProviderTiles("OpenStreetMap.Mapnik") %>%
+setView(lat = 55, lng = -3, zoom = 6) %>%
+addPolygons(data = UK,
+            stroke = FALSE, smoothFactor = 0.2, fillOpacity = 0.3,
+            fillColor = ~mypal(mydf$value),
+            popup = paste("Region: ", UK$NAME_2, "<br>",
+                          "Value: ", mydf$value, "<br>")) %>%
+addLegend(position = "bottomright", pal = mypal, values = mydf$value,
+          title = "UK value",
+          opacity = 1)
+
 htmlwidgets::saveWidget(frameableWidget(l),'leaflet.html')
 ```
 
