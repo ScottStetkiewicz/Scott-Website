@@ -53,4 +53,4 @@ l <- leaflet() %>% addTiles()
 htmlwidgets::saveWidget(frameableWidget(l),'leaflet.html')
 ```
 
-<iframe seamless src="/leaflet.html" width="100%" height="500"></iframe>
+<iframe seamless src="../leaflet.html" width="100%" height="500"></iframe>
