@@ -31,6 +31,7 @@ library(leaflet)
 library(htmltools)
 library(kableExtra)
 library(knitr)
+library(widgetframe)
 ```
 
 ### Scraping and Dataframe Construction

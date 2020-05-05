@@ -30,6 +30,7 @@ library(leaflet)
 library(htmltools)
 library(kableExtra)
 library(knitr)
+library(widgetframe)
 ```
 
 ### Scraping and Dataframe Construction
@@ -136,9 +137,23 @@ head(test2) %>%
  </thead>
 <tbody>
   <tr>
+   <td style="text-align:left;"> Newcastle upon Tyne </td>
+   <td style="text-align:right;"> -1.5995568 </td>
+   <td style="text-align:right;"> 54.98493 </td>
+   <td style="text-align:left;"> North East England </td>
+   <td style="text-align:left;"> England </td>
    <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:right;"> -3.2740175 </td>
-   <td style="text-align:right;"> 54.69682 </td>
+   <td style="text-align:left;"> Receptionist </td>
+   <td style="text-align:left;"> £18,342 - £19,133 a year </td>
+   <td style="text-align:left;"> Newcastle University </td>
+   <td style="text-align:left;"> Newcastle upon Tyne </td>
+   <td style="text-align:left;"> Just posted </td>
+   <td style="text-align:right;"> 18342 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:right;"> -3.2763412 </td>
+   <td style="text-align:right;"> 54.69830 </td>
    <td style="text-align:left;"> Not Available </td>
    <td style="text-align:left;"> Not Available </td>
    <td style="text-align:left;"> United Kingdom </td>
@@ -150,23 +165,23 @@ head(test2) %>%
    <td style="text-align:right;"> NA </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Newcastle upon Tyne </td>
-   <td style="text-align:right;"> -1.6117088 </td>
-   <td style="text-align:right;"> 54.97827 </td>
-   <td style="text-align:left;"> North East England </td>
-   <td style="text-align:left;"> England </td>
+   <td style="text-align:left;"> Edinburgh </td>
+   <td style="text-align:right;"> -3.1939846 </td>
+   <td style="text-align:right;"> 55.94482 </td>
+   <td style="text-align:left;"> Not Available </td>
+   <td style="text-align:left;"> Scotland </td>
    <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> Receptionist </td>
-   <td style="text-align:left;"> £18,342 - £19,133 a year </td>
-   <td style="text-align:left;"> Newcastle University </td>
-   <td style="text-align:left;"> Newcastle upon Tyne </td>
-   <td style="text-align:left;"> 26 days ago </td>
-   <td style="text-align:right;"> 18342 </td>
+   <td style="text-align:left;"> Undergraduate Course Secretary </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> University of Edinburgh </td>
+   <td style="text-align:left;"> Edinburgh </td>
+   <td style="text-align:left;"> Just posted </td>
+   <td style="text-align:right;"> NA </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Edinburgh </td>
-   <td style="text-align:right;"> -3.1898753 </td>
-   <td style="text-align:right;"> 55.94996 </td>
+   <td style="text-align:right;"> -3.1669386 </td>
+   <td style="text-align:right;"> 55.96942 </td>
    <td style="text-align:left;"> Not Available </td>
    <td style="text-align:left;"> Scotland </td>
    <td style="text-align:left;"> United Kingdom </td>
@@ -174,41 +189,13 @@ head(test2) %>%
    <td style="text-align:left;"> NA </td>
    <td style="text-align:left;"> University of Edinburgh </td>
    <td style="text-align:left;"> Edinburgh </td>
-   <td style="text-align:left;"> 15 days ago </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Newcastle upon Tyne </td>
-   <td style="text-align:right;"> -1.6114479 </td>
-   <td style="text-align:right;"> 54.97087 </td>
-   <td style="text-align:left;"> North East England </td>
-   <td style="text-align:left;"> England </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> Learning and Teaching Assistant </td>
-   <td style="text-align:left;"> £18,709 - £21,236 a year </td>
-   <td style="text-align:left;"> Newcastle University </td>
-   <td style="text-align:left;"> Newcastle upon Tyne </td>
-   <td style="text-align:left;"> 25 days ago </td>
-   <td style="text-align:right;"> 18709 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:right;"> -3.2790344 </td>
-   <td style="text-align:right;"> 54.69915 </td>
-   <td style="text-align:left;"> Not Available </td>
-   <td style="text-align:left;"> Not Available </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> Built Heritage Specialist </td>
-   <td style="text-align:left;"> NA </td>
-   <td style="text-align:left;"> WSP </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> 30+ days ago </td>
+   <td style="text-align:left;"> 19 days ago </td>
    <td style="text-align:right;"> NA </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Cambridge </td>
-   <td style="text-align:right;"> 0.1219514 </td>
-   <td style="text-align:right;"> 52.20906 </td>
+   <td style="text-align:right;"> 0.1157542 </td>
+   <td style="text-align:right;"> 52.21585 </td>
    <td style="text-align:left;"> East of England </td>
    <td style="text-align:left;"> England </td>
    <td style="text-align:left;"> United Kingdom </td>
@@ -218,6 +205,20 @@ head(test2) %>%
    <td style="text-align:left;"> Cambridge </td>
    <td style="text-align:left;"> 30+ days ago </td>
    <td style="text-align:right;"> 41526 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Boxworth </td>
+   <td style="text-align:right;"> -0.0248947 </td>
+   <td style="text-align:right;"> 52.26178 </td>
+   <td style="text-align:left;"> East of England </td>
+   <td style="text-align:left;"> England </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Assistant Ecological Consultant </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> RSK Environment GmbH </td>
+   <td style="text-align:left;"> Boxworth </td>
+   <td style="text-align:left;"> 28 days ago </td>
+   <td style="text-align:right;"> NA </td>
   </tr>
 </tbody>
 </table>
