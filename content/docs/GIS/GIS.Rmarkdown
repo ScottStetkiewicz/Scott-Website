@@ -44,7 +44,7 @@ library(widgetframe)
 
 Our first step is to initialize a `tracts` vector that defines the state of interest for `acs` calls. We can then make a basic `acs.fetch` call using the relevant table number for our dataset of interest (in this case, B05001). The finall line here allows us to see what the column names are in the dataframe:
 
-```{r}
+```{r, eval=FALSE}
 # Select Rhode Island for tracts
 tracts <- tracts(state = 'RI', cb=TRUE)
 
@@ -97,6 +97,8 @@ df_merged <- df_merged[df_merged$ALAND>0,]
 
 ### Plot Output
 
+Finally, we set our popup labels and color palette for the final `leaflet` output:
+
 ```{r}
 # Set popup labels
 popup <- paste0("GEOID: ", df_merged$GEOID, "<br>", "Percent of non-U.S. Citizens: ", round(df_merged$percent,2))
@@ -107,15 +109,14 @@ pal <- colorNumeric(
   domain = df_merged$percent
 )
 
-RI<-leaflet() %>%
-  addProviderTiles("CartoDB.Positron") %>%
-  addPolygons(data = df_merged,
-              fillColor = ~pal(percent),
-              color = "#b2aeae", # you need to use hex colors
+RI<-leaflet(df_merged) %>% 
+  addTiles() %>%
+  addPolygons(fillColor = ~pal(percent),
+              color = "#b2aeae",
               fillOpacity = 0.7,
               weight = 1,
               smoothFactor = 0.2,
-              popup = popup) %>%
+              popup = popup) %>% 
   addLegend(pal = pal,
             values = df_merged$percent,
             position = "bottomright",
@@ -124,3 +125,5 @@ RI<-leaflet() %>%
 
 htmlwidgets::saveWidget(frameableWidget(RI),'RI.html')
 ```
+
+<iframe seamless src="../RI.html" width="100%" height="500"></iframe>

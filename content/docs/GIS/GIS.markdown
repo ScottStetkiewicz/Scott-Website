@@ -47,31 +47,7 @@ Our first step is to initialize a `tracts` vector that defines the state of inte
 ```r
 # Select Rhode Island for tracts
 tracts <- tracts(state = 'RI', cb=TRUE)
-```
 
-```
-## 
-  |                                                                            
-  |                                                                      |   0%
-  |                                                                            
-  |===========                                                           |  15%
-  |                                                                            
-  |======================                                                |  31%
-  |                                                                            
-  |========================                                              |  35%
-  |                                                                            
-  |===================================                                   |  51%
-  |                                                                            
-  |============================================                          |  62%
-  |                                                                            
-  |=======================================================               |  78%
-  |                                                                            
-  |==================================================================    |  94%
-  |                                                                            
-  |======================================================================| 100%
-```
-
-```r
 # Fetch ACS data 
 ri <- acs.fetch(
   geography = geo.make(state = "RI", county="*", tract = "*"),
@@ -81,15 +57,6 @@ ri <- acs.fetch(
 
 # View column names
 attr(ri, "acs.colnames") 
-```
-
-```
-## [1] "Nativity and Citizenship Status in the United States: Total:"                                                
-## [2] "Nativity and Citizenship Status in the United States: U.S. citizen, born in the United States"               
-## [3] "Nativity and Citizenship Status in the United States: U.S. citizen, born in Puerto Rico or U.S. Island Areas"
-## [4] "Nativity and Citizenship Status in the United States: U.S. citizen, born abroad of American parent(s)"       
-## [5] "Nativity and Citizenship Status in the United States: U.S. citizen by naturalization"                        
-## [6] "Nativity and Citizenship Status in the United States: Not a U.S. citizen"
 ```
 
 ### Dataframe Construction
@@ -132,6 +99,8 @@ df_merged <- df_merged[df_merged$ALAND>0,]
 
 ### Plot Output
 
+Finally, we set our popup labels and color palette for the final `leaflet` output:
+
 
 ```r
 # Set popup labels
@@ -143,15 +112,14 @@ pal <- colorNumeric(
   domain = df_merged$percent
 )
 
-RI<-leaflet() %>%
-  addProviderTiles("CartoDB.Positron") %>%
-  addPolygons(data = df_merged,
-              fillColor = ~pal(percent),
-              color = "#b2aeae", # you need to use hex colors
+RI<-leaflet(df_merged) %>% 
+  addTiles() %>%
+  addPolygons(fillColor = ~pal(percent),
+              color = "#b2aeae",
               fillOpacity = 0.7,
               weight = 1,
               smoothFactor = 0.2,
-              popup = popup) %>%
+              popup = popup) %>% 
   addLegend(pal = pal,
             values = df_merged$percent,
             position = "bottomright",
@@ -160,3 +128,5 @@ RI<-leaflet() %>%
 
 htmlwidgets::saveWidget(frameableWidget(RI),'RI.html')
 ```
+
+<iframe seamless src="../RI.html" width="100%" height="500"></iframe>
