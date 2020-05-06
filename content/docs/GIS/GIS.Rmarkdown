@@ -126,12 +126,10 @@ RI<-leaflet(df_merged) %>%
 # Workaround for Leaflet bug with NA in legend
 css_fix <- "div.info.legend.leaflet-control br {clear: both;}" 
 html_fix <- htmltools::tags$style(type = "text/css", css_fix)  
-RI %>% htmlwidgets::prependContent(html_fix)
-```
-
-```{r}
+RI<-RI %>% htmlwidgets::prependContent(html_fix)
 htmlwidgets::saveWidget(frameableWidget(RI),'RI.html')
 ```
+
 <iframe seamless src="../RI.html" width="100%" height="500"></iframe>
 
 ### Final Thoughts
