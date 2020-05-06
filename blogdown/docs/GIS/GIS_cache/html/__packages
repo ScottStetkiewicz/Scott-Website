@@ -15,3 +15,7 @@ htmlwidgets
 widgetframe
 sp
 raster
+tigris
+XML
+acs
+htmltools
