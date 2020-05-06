@@ -123,7 +123,7 @@ RI<-leaflet(df_merged) %>%
   addLegend(pal = pal,
             values = df_merged$percent,
             position = "bottomright",
-            title = "Percent of non-citizens",
+            title = "Percent of<br>non-citizens",
             labFormat = labelFormat(suffix = "%"))
 
 # Workaround for Leaflet bug with NA in legend
