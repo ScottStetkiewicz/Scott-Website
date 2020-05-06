@@ -6,7 +6,7 @@ toc: true
 toc_float: true
 type: docs
 
-linktitle: Leaflet
+linktitle: Leaflet for Census Data
 menu:
   docs:
     parent: GIS
@@ -74,7 +74,10 @@ attr(ri, "acs.colnames")
 
 ### Dataframe Construction
 
-With our initial data fetched, we can create a new structure to hold geolocation variables and our main data of 1) overall population in the state of RI and 2) the total number of non-citizens:
+With our initial data fetched, we can create a new structure to hold geolocation variables and our main data of: 
+
+1) the overall population in the state of RI, and 
+2) the total number of non-citizens in the state
 
 
 ```r
@@ -98,7 +101,7 @@ ri_df$percent <- 100*(ri_df$non_citizen/ri_df$total)
 
 ### Perform spatial join
 
-We can now spatially join our initial `tracts` vector with our new dataframe:
+We can now spatially join our initial `tracts` vector with our new dataframe, using the `GEOID` parameter:
 
 
 ```r
@@ -110,12 +113,12 @@ df_merged <- df_merged[df_merged$ALAND>0,]
 
 ### Plot Output
 
-Finally, we set our popup labels and color palette for the final `leaflet` output:
+Finally, we set our popup labels and color palette for the final `leaflet` output, to allow clicking on a tract to get information on the percentage on non-citizens:
 
 
 ```r
 # Set popup labels
-popup <- paste0("GEOID: ", df_merged$GEOID, "<br>", "Percent of non-U.S. Citizens: ", round(df_merged$percent,2))
+popup <- paste0("GEOID: ", df_merged$GEOID, "<br>", "Percent of non-citizens: ", round(df_merged$percent,2))
 # Set color palette
 pal <- colorNumeric(
   palette = "plasma",
@@ -133,7 +136,7 @@ RI<-leaflet(df_merged) %>%
   addLegend(pal = pal,
             values = df_merged$percent,
             position = "bottomright",
-            title = "Percent of non <br>US-born citizens",
+            title = "Percent of non-citizens",
             labFormat = labelFormat(suffix = "%"))
 
 # Workaround for Leaflet bug with NA in legend
@@ -147,4 +150,4 @@ htmlwidgets::saveWidget(frameableWidget(RI),'RI.html')
 
 ### Final Thoughts
 
-
+This brief overview highlights some of `leaflet`'s functionality to map continuous data in an interavtive fashion, as the popups allow us to quickly see the exact percentage of non-citizens with a single click. Moreover, this process shows how spatial joining can be performed between government datasets and the GIS interface for quick data visualization. There are plenty of other ways to manipulate data for exciting spatial output in `leaflet`, and for further ideas on map types I'd recommend looking at the [Leaflet for R page](https://rstudio.github.io/leaflet/).
