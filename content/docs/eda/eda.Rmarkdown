@@ -7,7 +7,7 @@ type: docs
 linktitle: Python Data Wrangling
 menu:
   docs:
-    parent: EDA
+    parent: Python
     weight: 2
 ---
 

@@ -1,0 +1,22 @@
+---
+title: "k-Means Clustering"
+
+draft: false
+toc: true
+toc_float: true
+type: docs
+
+linktitle: k-Means Clustering
+menu:
+  docs:
+    parent: Machine Learning
+    weight: 1
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Under development
+
+Coming soon...
