@@ -97,8 +97,8 @@ glimpse(den)
 ```
 
 ```
-## Observations: 1,076
-## Variables: 21
+## Rows: 1,076
+## Columns: 21
 ## $ REF          <chr> "BCC10", "BCC11", "BCC12", "BCC13", "BCC137", "BCC138", …
 ## $ DENOMINATION <chr> "denarius", "denarius", "denarius", "denarius", "denariu…
 ## $ MINT         <chr> "Rome", "Rome", "Rome", "Rome", "Rome", "Rome", "Rome", …
