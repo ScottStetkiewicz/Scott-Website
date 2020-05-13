@@ -44,14 +44,14 @@ glass <- Glass %>%
 
 ## Checking Clustering Tendency
 
-Since clustering algorithms both impose and magnify order within a dataset, it's important to make sure that there are inherent groups present within the data to begin with. Otherwise, we can end up creating spurious clusters. Using the [Hopkins statistic](https://en.wikipedia.org/wiki/Hopkins_statistic), we can perform a hypothesis test where the H~0~ assumes the data is uniformly randomly distributed. A value of close to 1 indicates the data has significant group structure, close to 0.5 suggests truly random data, while a value close to 0 represents uniformly distributed data. 
+Since clustering algorithms both impose and magnify order within a dataset, it's important to make sure that there are inherent groups present within the data to begin with. Otherwise, we can end up creating spurious clusters. Using the [Hopkins statistic](https://en.wikipedia.org/wiki/Hopkins_statistic), we can perform a hypothesis test where the H<sub>0</sub> assumes the data is uniformly randomly distributed. A value of close to 1 indicates the data has significant group structure, close to 0.5 suggests truly random data, while a value close to 0 represents uniformly distributed data. 
 
 ```{r}
 res <- get_clust_tendency(glass, n = nrow(glass)-1, graph = FALSE)
 res$hopkins_stat
 ```
 
-Since H > 0.5, and is in fact close to 1, we can reject H~0~ and conclude that our data is suitable for clustering.  
+Since H > 0.5, and is in fact close to 1, we can reject H<sub>0</sub> and conclude that our data is suitable for clustering.  
 
 ## Determining Optimal Number of Clusters
 
@@ -109,7 +109,7 @@ fviz_silhouette(sil_2)
 fviz_silhouette(sil_10)
 ```
 
-The average width of the silhouettes with *k*=2 is appreciably higher than with *k*=10, although both have clusters below the mean line (something we'd like to avoid). This would indicate that neither method is able to provide truly high quality clustering within the dataset (something quite clearly visibile in the previous biplots).
+The average width of the silhouettes with *k*=2 is appreciably higher than with *k*=10, although both have clusters below the mean line (something we'd like to avoid). This would indicate that while neither method is able to provide truly high quality clustering within the dataset (something quite clearly visibile in the previous biplots), using fewer clusters increases clustering performance.
 
 Similarly, the [Dunn index](https://en.wikipedia.org/wiki/Dunn_index), which measures cluster compaction quality, also presents a sub-optimal value (range -1 to 1): 
 
@@ -133,4 +133,4 @@ Given the poor performance of *k*-means clustering in the internal validation me
 
 ## Final Thoughts
 
-This brief overview of *k*-means clustering highlights some of the practical applications of partitioning clustering on multivariate data. While useful in exploratory data analysis, *k*-means is highly susceptible to outlier influence, and may be passed over in favor of more robust methods like [*k*-medioids (PAM)](https://en.wikipedia.org/wiki/K-medoids) or [hierarchical clustering](https://en.wikipedia.org/wiki/Hierarchical_clustering) depending on the depth of analysis.
+This tutorial of *k*-means clustering highlights some of the practical applications of partitioning clustering on multivariate data. While useful in exploratory data analysis, *k*-means is highly susceptible to outlier influence, and may be passed over in favor of more robust methods like [*k*-medioids (PAM)](https://en.wikipedia.org/wiki/K-medoids) or [hierarchical clustering](https://en.wikipedia.org/wiki/Hierarchical_clustering) depending on the depth of analysis.

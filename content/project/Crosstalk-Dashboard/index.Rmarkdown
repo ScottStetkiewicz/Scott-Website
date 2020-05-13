@@ -34,5 +34,5 @@ There are three ways to reactively select data points with this app:
 This repostory will be updated soon to provide reactive infoBoxes/valueBoxes and gauge elements
 
 {{% alert note %}}
-This app can be forked [here on Github](https://github.com/ScottStetkiewicz/CrossTalk-Archaeology-Dashboard). 
+The [CrossTalk Dashboard](https://scottstetkiewicz.shinyapps.io/slagMaps/) is hosted on shinpyapps.io (limited usage), but can be forked [here on Github](https://github.com/ScottStetkiewicz/CrossTalk-Archaeology-Dashboard). 
 {{% /alert %}}

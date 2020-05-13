@@ -29,7 +29,7 @@ While software platforms like ArcGIS and QGIS are the industry standard for comp
 
 A basic usage example employing `leaflet` and the [`acs`](https://github.com/cran/acs) package to visualize U.S. Census data is demonstrated below. 
 
-In this particular tutorial, I'll be using the [2011 Nativity And Citizenship Status In The United States](https://www.census.gov/programs-surveys/acs/technical-documentation/table-and-geography-changes/2011/1-year.html) dataframe, which provides information on the citizenship status of U.S. residents. The aim here is to produce GIS output that can map where the highest proportion of individuals not born in the U.S. reside in the state of Rhode Island as of 2011.
+In this particular tutorial, I'll be using the [2011 Nativity And Citizenship Status In The United States](https://www.census.gov/programs-surveys/acs/technical-documentation/table-and-geography-changes/2011/1-year.html) dataframe, which provides information on the citizenship status of U.S. residents. The aim here is to produce GIS output that maps the tract density of non-U.S. citizens residing in the state of Rhode Island as of 2011.
 
 ### Fetching `acs` Data
 

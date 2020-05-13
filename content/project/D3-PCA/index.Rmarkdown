@@ -21,5 +21,5 @@ Once data is uploaded into this app and properly formatted using the upload menu
 Since the output is rendered using `scatterD3`, tooltips providing sample/site names (user-selected) appear when data points are hovered over, and the respective data groups can be highlighted by hovering over the plot legend. 
 
 {{% alert note %}}
-This app can be forked [here on Github](https://github.com/ScottStetkiewicz/D3-PCA).
+The [D3 PCA App](https://scottstetkiewicz.shinyapps.io/d3-pca/) is hosted on shinpyapps.io (limited usage), but can be forked [here on Github](https://github.com/ScottStetkiewicz/D3-PCA).
 {{% /alert %}}

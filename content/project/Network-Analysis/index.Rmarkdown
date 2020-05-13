@@ -37,5 +37,5 @@ This app provides a graphical means of exploring the dataframe and the relations
 The sidebar of this app allows users to adjust node and edge parameters, alter the linkage sensitivity and highlight algorithm, and filter the visualization based on departments. The output can be zoomed, nodes can be dragged to reorient the plot, and hovering enables tooltips to describe the shared technologies between faculty members.
 
 {{% alert note %}}
-This app can be forked [here on Github](https://github.com/ScottStetkiewicz/Network-Analysis). 
+The [Network Analysis App](https://scottstetkiewicz.shinyapps.io/NetworkAnalysis/) is hosted on shinpyapps.io (limited usage), but can be forked [here on Github](https://github.com/ScottStetkiewicz/Network-Analysis). 
 {{% /alert %}}
