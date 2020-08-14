@@ -1,11 +1,9 @@
 ---
 title: "k-Means Clustering"
-
-draft: false
-toc: true
-toc_float: true
+draft: no
+toc: yes
+toc_float: yes
 type: docs
-
 linktitle: k-Means Clustering
 menu:
   docs:

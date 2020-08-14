@@ -18,6 +18,16 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
+  title = "Research Program Administrator"
+  company = "Center for Inclusive Democracy /nSol Price School of Public Policy n/University of Southern California"
+  company_url = ""
+  location = ""
+  date_start = "2020-08-24"
+  date_end = ""
+  description = """GIS/data analysis project manager for *Voter Service and Polling Center Siting Tool*
+  """
+  
+[[experience]]
   title = "Freelance Data Scientist"
   company = ""
   company_url = ""
@@ -26,7 +36,12 @@ date_format = "Jan 2006"
   date_end = ""
   description = """Contracted by: **University of Edinburgh**
   
-  Wrangled/tidied data, provided specialist GIS training and produced custom R Shiny visualization app for Abercromby Professor Ian Ralston's AHRC-funded [**Atlas of Hillforts Project**](https://hillforts.arch.ox.ac.uk/)."""
+  Wrangled/tidied data, provided specialist GIS training and produced custom R Shiny visualization app for Abercromby Professor Ian Ralston's AHRC-funded [**Atlas of Hillforts Project**](https://hillforts.arch.ox.ac.uk/).
+  
+  Volunteer work: **Town of Cumberland Fire Department**
+  
+  GIS visualization and quantitative analysis of emergency response datasets for resource allocation/optimization.
+  """
 
 [[experience]]
   title = "Post-Excavation Analyst"

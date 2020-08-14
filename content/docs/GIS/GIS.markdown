@@ -1,11 +1,9 @@
 ---
 title: "GIS with Leaflet"
-
-draft: false
-toc: true
-toc_float: true
+draft: no
+toc: yes
+toc_float: yes
 type: docs
-
 linktitle: Leaflet for Census Data
 menu:
   docs:

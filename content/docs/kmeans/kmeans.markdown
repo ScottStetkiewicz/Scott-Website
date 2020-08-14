@@ -1,11 +1,9 @@
 ---
 title: "k-Means Clustering"
-
-draft: false
-toc: true
-toc_float: true
+draft: no
+toc: yes
+toc_float: yes
 type: docs
-
 linktitle: k-Means Clustering
 menu:
   docs:
@@ -86,6 +84,28 @@ glass.nbclust <- glass %>%
 
 ```r
 fviz_nbclust(glass.nbclust)
+```
+
+```
+## Warning in if (class(best_nc) == "numeric") print(best_nc) else if
+## (class(best_nc) == : the condition has length > 1 and only the first element
+## will be used
+```
+
+```
+## Warning in if (class(best_nc) == "matrix") .viz_NbClust(x, print.summary, : the
+## condition has length > 1 and only the first element will be used
+```
+
+```
+## Warning in if (class(best_nc) == "numeric") print(best_nc) else if
+## (class(best_nc) == : the condition has length > 1 and only the first element
+## will be used
+```
+
+```
+## Warning in if (class(best_nc) == "matrix") {: the condition has length > 1 and
+## only the first element will be used
 ```
 
 ```

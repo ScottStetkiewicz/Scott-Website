@@ -137,88 +137,88 @@ head(test2) %>%
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:left;"> Newcastle upon Tyne </td>
-   <td style="text-align:right;"> -1.614514 </td>
-   <td style="text-align:right;"> 54.96136 </td>
-   <td style="text-align:left;"> North East England </td>
+   <td style="text-align:left;"> Cambridge </td>
+   <td style="text-align:right;"> 0.1759705 </td>
+   <td style="text-align:right;"> 52.21124 </td>
+   <td style="text-align:left;"> East of England </td>
    <td style="text-align:left;"> England </td>
    <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> Receptionist </td>
-   <td style="text-align:left;"> £18,342 - £19,133 a year </td>
-   <td style="text-align:left;"> Newcastle University </td>
-   <td style="text-align:left;"> Newcastle upon Tyne </td>
-   <td style="text-align:left;"> 7 days ago </td>
-   <td style="text-align:right;"> 18342 </td>
+   <td style="text-align:left;"> Academic Services Librarian (Human and Social Sciences) (Fix... </td>
+   <td style="text-align:left;"> £36,914 - £49,553 a year </td>
+   <td style="text-align:left;"> University of Cambridge </td>
+   <td style="text-align:left;"> Cambridge </td>
+   <td style="text-align:left;"> 9 days ago </td>
+   <td style="text-align:right;"> 36914 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:right;"> -3.298248 </td>
-   <td style="text-align:right;"> 54.69755 </td>
+   <td style="text-align:left;"> Edinburgh </td>
+   <td style="text-align:right;"> -3.1433294 </td>
+   <td style="text-align:right;"> 55.94205 </td>
    <td style="text-align:left;"> Not Available </td>
-   <td style="text-align:left;"> Not Available </td>
+   <td style="text-align:left;"> Scotland </td>
    <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> 2020 Environmental Degree Apprenticeships </td>
+   <td style="text-align:left;"> Treasure Trove Officer </td>
+   <td style="text-align:left;"> £26,576 - £28,897 a year </td>
+   <td style="text-align:left;"> National Museums Scotland </td>
+   <td style="text-align:left;"> Edinburgh </td>
+   <td style="text-align:left;"> 2 days ago </td>
+   <td style="text-align:right;"> 26576 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Edinburgh </td>
+   <td style="text-align:right;"> -3.1980859 </td>
+   <td style="text-align:right;"> 55.95987 </td>
+   <td style="text-align:left;"> Not Available </td>
+   <td style="text-align:left;"> Scotland </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Research Assistant – The Mental Health And Wellbeing Of Yout... </td>
    <td style="text-align:left;"> NA </td>
-   <td style="text-align:left;"> WSP </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> 30+ days ago </td>
+   <td style="text-align:left;"> University of Edinburgh </td>
+   <td style="text-align:left;"> Edinburgh </td>
+   <td style="text-align:left;"> 21 days ago </td>
    <td style="text-align:right;"> NA </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Birmingham </td>
-   <td style="text-align:right;"> -1.891972 </td>
-   <td style="text-align:right;"> 52.46758 </td>
-   <td style="text-align:left;"> West Midlands </td>
-   <td style="text-align:left;"> England </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> Environmental Manager </td>
-   <td style="text-align:left;"> NA </td>
-   <td style="text-align:left;"> Kier Group </td>
-   <td style="text-align:left;"> Birmingham </td>
-   <td style="text-align:left;"> Just posted </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Manchester </td>
-   <td style="text-align:right;"> -2.228127 </td>
-   <td style="text-align:right;"> 53.49043 </td>
-   <td style="text-align:left;"> North West England </td>
-   <td style="text-align:left;"> England </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> Graduate Transport Planner (Manchester) </td>
-   <td style="text-align:left;"> NA </td>
-   <td style="text-align:left;"> WYG Group Ltd </td>
-   <td style="text-align:left;"> Manchester </td>
-   <td style="text-align:left;"> 30+ days ago </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:right;"> -3.263445 </td>
-   <td style="text-align:right;"> 54.71424 </td>
-   <td style="text-align:left;"> Not Available </td>
-   <td style="text-align:left;"> Not Available </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> Built Heritage Specialist </td>
-   <td style="text-align:left;"> NA </td>
-   <td style="text-align:left;"> WSP </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> 30+ days ago </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Swindon </td>
-   <td style="text-align:right;"> -1.792349 </td>
-   <td style="text-align:right;"> 51.55386 </td>
+   <td style="text-align:left;"> Gloucester GL1 1HP </td>
+   <td style="text-align:right;"> -2.2629588 </td>
+   <td style="text-align:right;"> 51.86297 </td>
    <td style="text-align:left;"> South West England </td>
    <td style="text-align:left;"> England </td>
    <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> Public Engagement Manager </td>
-   <td style="text-align:left;"> £30,782 a year </td>
-   <td style="text-align:left;"> AHRC </td>
-   <td style="text-align:left;"> Swindon </td>
-   <td style="text-align:left;"> 20 days ago </td>
-   <td style="text-align:right;"> 30782 </td>
+   <td style="text-align:left;"> Engagement Officer </td>
+   <td style="text-align:left;"> £23,369 a year </td>
+   <td style="text-align:left;"> Gloucestershire County Council </td>
+   <td style="text-align:left;"> Gloucester GL1 1HP </td>
+   <td style="text-align:left;"> 10 days ago </td>
+   <td style="text-align:right;"> 23369 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Liverpool </td>
+   <td style="text-align:right;"> -3.0134105 </td>
+   <td style="text-align:right;"> 53.40838 </td>
+   <td style="text-align:left;"> North West England </td>
+   <td style="text-align:left;"> England </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Administrative Co-ordinator </td>
+   <td style="text-align:left;"> £17,942 a year </td>
+   <td style="text-align:left;"> Liverpool Museums </td>
+   <td style="text-align:left;"> Liverpool </td>
+   <td style="text-align:left;"> Just posted </td>
+   <td style="text-align:right;"> 17942 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Barnstaple </td>
+   <td style="text-align:right;"> -4.0856167 </td>
+   <td style="text-align:right;"> 51.08382 </td>
+   <td style="text-align:left;"> South West England </td>
+   <td style="text-align:left;"> England </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Tea Room Assistant </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> North Devon District Council </td>
+   <td style="text-align:left;"> Barnstaple </td>
+   <td style="text-align:left;"> 1 day ago </td>
+   <td style="text-align:right;"> NA </td>
   </tr>
 </tbody>
 </table>
