@@ -6,7 +6,7 @@ active = true  # Activate this widget? true/false
 weight = 8  # Order that this section will appear.
 
 title = "Experience"
-subtitle = "Outside of my most recent employment in post-excavation laboratory analysis and data science, I also have several years of experience in both commercial and academic archaeological fieldwork.<br/><br/> For more information about my teaching background, please refer to the 'Teaching' section."
+subtitle = "Outside of my most recent employment in higher education and data science, I also have several years of experience in both commercial and academic archaeological fieldwork.<br/><br/> For more information about my teaching background, please refer to the 'Teaching' section."
 
 # Date format for experience
 #   Refer to https://sourcethemes.com/academic/docs/customization/#date-format
@@ -20,11 +20,11 @@ date_format = "Jan 2006"
 [[experience]]
   title = "Research Program Administrator"
   company = "University of Southern California"
-  company_url = "https://cid.usc.edu"
-  location = ""
+  company_url = ""
+  location = "Sacramento, CA"
   date_start = "2020-08-24"
   date_end = ""
-  description = """Program manager at the Center for Inclusive Democracy, overseeing GIS/data analysis for the [*Voter Service and Polling Center Siting Tool*](https://cid.usc.edu/sitingtool).
+  description = """Program manager at the [Center for Inclusive Democracy](https://cid.usc.edu), overseeing GIS/data analysis for the [*Voter Service and Polling Center Siting Tool*](https://cid.usc.edu/sitingtool).
   """
   
 [[experience]]
