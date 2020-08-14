@@ -19,9 +19,9 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
   title = "Research Program Administrator"
-  company = "Center for Inclusive Democracy<br/>Sol Price School of Public Policy<br/>University of Southern California"
+  company = "Center for Inclusive Democracy"
   company_url = "https://cid.usc.edu"
-  location = ""
+  location = "University of Southern California"
   date_start = "2020-08-24"
   date_end = ""
   description = """GIS/data analysis project manager for [*Voter Service and Polling Center Siting Tool*](https://cid.usc.edu/sitingtool)
@@ -35,12 +35,10 @@ date_format = "Jan 2006"
   date_start = "2018-09-01"
   date_end = ""
   description = """Contracted by: **University of Edinburgh**
-  ---
   Wrangled/tidied data, provided specialist GIS training and produced custom R Shiny visualization app for Abercromby Professor Ian Ralston's AHRC-funded [**Atlas of Hillforts Project**](https://hillforts.arch.ox.ac.uk/).
   
-  Volunteer work: **Town of Cumberland Fire Department**
-  ---
-  GIS visualization and quantitative analysis of emergency response datasets for resource allocation/optimization.
+  Volunteer work: **Town of Cumberland, Rhode Island**
+  GIS visualization and quantitative analysis of emergency response datasets for fire department resource allocation/optimization.
   """
 
 [[experience]]

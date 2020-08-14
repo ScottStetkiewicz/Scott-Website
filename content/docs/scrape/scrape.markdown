@@ -138,8 +138,8 @@ head(test2) %>%
 <tbody>
   <tr>
    <td style="text-align:left;"> Cambridge </td>
-   <td style="text-align:right;"> 0.1759705 </td>
-   <td style="text-align:right;"> 52.21124 </td>
+   <td style="text-align:right;"> 0.1673908 </td>
+   <td style="text-align:right;"> 52.29787 </td>
    <td style="text-align:left;"> East of England </td>
    <td style="text-align:left;"> England </td>
    <td style="text-align:left;"> United Kingdom </td>
@@ -152,8 +152,8 @@ head(test2) %>%
   </tr>
   <tr>
    <td style="text-align:left;"> Edinburgh </td>
-   <td style="text-align:right;"> -3.1433294 </td>
-   <td style="text-align:right;"> 55.94205 </td>
+   <td style="text-align:right;"> -3.1664502 </td>
+   <td style="text-align:right;"> 56.01302 </td>
    <td style="text-align:left;"> Not Available </td>
    <td style="text-align:left;"> Scotland </td>
    <td style="text-align:left;"> United Kingdom </td>
@@ -165,37 +165,9 @@ head(test2) %>%
    <td style="text-align:right;"> 26576 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Edinburgh </td>
-   <td style="text-align:right;"> -3.1980859 </td>
-   <td style="text-align:right;"> 55.95987 </td>
-   <td style="text-align:left;"> Not Available </td>
-   <td style="text-align:left;"> Scotland </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> Research Assistant – The Mental Health And Wellbeing Of Yout... </td>
-   <td style="text-align:left;"> NA </td>
-   <td style="text-align:left;"> University of Edinburgh </td>
-   <td style="text-align:left;"> Edinburgh </td>
-   <td style="text-align:left;"> 21 days ago </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Gloucester GL1 1HP </td>
-   <td style="text-align:right;"> -2.2629588 </td>
-   <td style="text-align:right;"> 51.86297 </td>
-   <td style="text-align:left;"> South West England </td>
-   <td style="text-align:left;"> England </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> Engagement Officer </td>
-   <td style="text-align:left;"> £23,369 a year </td>
-   <td style="text-align:left;"> Gloucestershire County Council </td>
-   <td style="text-align:left;"> Gloucester GL1 1HP </td>
-   <td style="text-align:left;"> 10 days ago </td>
-   <td style="text-align:right;"> 23369 </td>
-  </tr>
-  <tr>
    <td style="text-align:left;"> Liverpool </td>
-   <td style="text-align:right;"> -3.0134105 </td>
-   <td style="text-align:right;"> 53.40838 </td>
+   <td style="text-align:right;"> -2.9942645 </td>
+   <td style="text-align:right;"> 53.42331 </td>
    <td style="text-align:left;"> North West England </td>
    <td style="text-align:left;"> England </td>
    <td style="text-align:left;"> United Kingdom </td>
@@ -207,17 +179,45 @@ head(test2) %>%
    <td style="text-align:right;"> 17942 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Barnstaple </td>
-   <td style="text-align:right;"> -4.0856167 </td>
-   <td style="text-align:right;"> 51.08382 </td>
+   <td style="text-align:left;"> Edinburgh </td>
+   <td style="text-align:right;"> -3.1637507 </td>
+   <td style="text-align:right;"> 55.95144 </td>
+   <td style="text-align:left;"> Not Available </td>
+   <td style="text-align:left;"> Scotland </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Student Support Assistant </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> University of Edinburgh </td>
+   <td style="text-align:left;"> Edinburgh </td>
+   <td style="text-align:left;"> 4 days ago </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Gloucester GL1 1HP </td>
+   <td style="text-align:right;"> -2.2744676 </td>
+   <td style="text-align:right;"> 51.85793 </td>
    <td style="text-align:left;"> South West England </td>
    <td style="text-align:left;"> England </td>
    <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> Tea Room Assistant </td>
+   <td style="text-align:left;"> Engagement Officer </td>
+   <td style="text-align:left;"> £23,369 a year </td>
+   <td style="text-align:left;"> Gloucestershire County Council </td>
+   <td style="text-align:left;"> Gloucester GL1 1HP </td>
+   <td style="text-align:left;"> 10 days ago </td>
+   <td style="text-align:right;"> 23369 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> London </td>
+   <td style="text-align:right;"> -0.1458877 </td>
+   <td style="text-align:right;"> 51.48963 </td>
+   <td style="text-align:left;"> Greater London </td>
+   <td style="text-align:left;"> England </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Graduate Research Analyst - Degree, Analyst, Writing </td>
    <td style="text-align:left;"> NA </td>
-   <td style="text-align:left;"> North Devon District Council </td>
-   <td style="text-align:left;"> Barnstaple </td>
-   <td style="text-align:left;"> 1 day ago </td>
+   <td style="text-align:left;"> Modis </td>
+   <td style="text-align:left;"> London </td>
+   <td style="text-align:left;"> 2 days ago </td>
    <td style="text-align:right;"> NA </td>
   </tr>
 </tbody>
