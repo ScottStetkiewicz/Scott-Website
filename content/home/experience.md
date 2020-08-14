@@ -24,7 +24,7 @@ date_format = "Jan 2006"
   location = "Sacramento, CA"
   date_start = "2020-08-24"
   date_end = ""
-  description = """Program manager at the [Center for Inclusive Democracy](https://cid.usc.edu), overseeing GIS/data analysis for the [*Voter Service and Polling Center Siting Tool*](https://cid.usc.edu/sitingtool).
+  description = """Project manager at the [Center for Inclusive Democracy](https://cid.usc.edu), overseeing GIS/data analysis for the [*Voter Service and Polling Center Siting Tool*](https://cid.usc.edu/sitingtool).
   """
   
 [[experience]]
@@ -35,7 +35,7 @@ date_format = "Jan 2006"
   date_start = "2018-09-01"
   date_end = ""
   description = """Contracted by: **University of Edinburgh**<br/> 
-  Wrangled/tidied data, provided specialist GIS training and produced custom R Shiny visualization app for Abercromby Professor Ian Ralston's AHRC-funded [**Atlas of Hillforts Project**](https://hillforts.arch.ox.ac.uk/).
+  Wrangled/tidied data, provided specialist GIS training and produced custom R Shiny visualization app for Abercromby Professor Ian Ralston's AHRC-funded [*Atlas of Hillforts Project*](https://hillforts.arch.ox.ac.uk/).
   
   Volunteer work: **Town of Cumberland, Rhode Island**<br/>
   GIS visualization and quantitative analysis of emergency response datasets for fire department resource allocation/optimization.
