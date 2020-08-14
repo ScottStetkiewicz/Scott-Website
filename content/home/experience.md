@@ -19,12 +19,12 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
   title = "Research Program Administrator"
-  company = "University of Southern California<br/>*Center for Inclusive Democracy*"
+  company = "University of Southern California"
   company_url = "https://cid.usc.edu"
   location = ""
   date_start = "2020-08-24"
   date_end = ""
-  description = """GIS/data analysis project manager for [*Voter Service and Polling Center Siting Tool*](https://cid.usc.edu/sitingtool)
+  description = """Program manager at the Center for Inclusive Democracy, overseeing GIS/data analysis for the [*Voter Service and Polling Center Siting Tool*](https://cid.usc.edu/sitingtool).
   """
   
 [[experience]]
@@ -57,7 +57,7 @@ date_format = "Jan 2006"
   location = "United Kingdom"
   date_start = "2017-11-01"
   date_end = "2018-05-31"
-  description = """Collected, synthesized, and statistically modeled archaeo-environmental data for Dr. Xavier Rubio-Campillo's UCIF-funded **Adaptation in (Pre-)Historic Shetland** project."""
+  description = """Collected, synthesized, and statistically modeled archaeo-environmental data for Dr. Xavier Rubio-Campillo's UCIF-funded *Adaptation in (Pre-)Historic Shetland* project."""
   
 [[experience]]
   title = "Teaching Assistant"
